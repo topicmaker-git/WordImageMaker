@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Image Maker - beg</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin-bottom: 20px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .word-title {
+            font-size: 3em;
+            color: #2c3e50;
+            margin: 0;
+            font-weight: bold;
+        }
+        
+        .subtitle {
+            font-size: 1.2em;
+            color: #7f8c8d;
+            margin-top: 10px;
+        }
+        
+        .content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            align-items: start;
+        }
+        
+        .image-section {
+            text-align: center;
+        }
+        
+        .generated-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+            border: 3px solid #3498db;
+        }
+        
+        .info-section {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .info-item {
+            margin-bottom: 20px;
+        }
+        
+        .info-label {
+            font-weight: bold;
+            color: #2c3e50;
+            font-size: 1.1em;
+            margin-bottom: 8px;
+            display: block;
+        }
+        
+        .info-content {
+            color: #34495e;
+            line-height: 1.6;
+            font-size: 1em;
+        }
+        
+        .scene-description {
+            background-color: #e8f5e8;
+            padding: 15px;
+            border-radius: 6px;
+            border-left: 4px solid #27ae60;
+        }
+        
+        .core-image {
+            background-color: #fff3cd;
+            padding: 15px;
+            border-radius: 6px;
+            border-left: 4px solid #ffc107;
+        }
+        
+        .prompt {
+            background-color: #e7f3ff;
+            padding: 15px;
+            border-radius: 6px;
+            border-left: 4px solid #007bff;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        .cost-info {
+            background-color: #f0f8ff;
+            padding: 15px;
+            border-radius: 6px;
+            border-left: 4px solid #20a5ff;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85em;
+        }
+        
+        .cost-info pre {
+            margin: 0;
+            white-space: pre-wrap;
+            color: #1e3a8a;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #dee2e6;
+            color: #6c757d;
+        }
+        
+        @media (max-width: 768px) {
+            .content {
+                grid-template-columns: 1fr;
+            }
+            
+            .word-title {
+                font-size: 2.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="word-title">beg</h1>
+            <p class="subtitle">英単語イメージイラスト</p>
+        </div>
+        
+        <div class="content">
+            <div class="image-section">
+                <img src="images/beg_20250711_173134.png" alt="beg illustration" class="generated-image">
+                <p style="margin-top: 15px; color: #6c757d; font-style: italic;">
+                    生成されたイラスト
+                </p>
+            </div>
+            
+            <div class="info-section">
+                <div class="info-item">
+                    <span class="info-label">🎬 シーンの内容</span>
+                    <div class="info-content scene-description">
+                        仲良しの猫が、ねずみに向かって座り、両前足を挙げてお願いしている。猫の目は大きく、甘えたような表情をしていて、ねずみは少し驚いた様子で見つめている。周りには、草が生い茂る公園の背景があり、青空が広がっている。猫の周りにはおもちゃが散らばり、ねずみはそのおもちゃを持っていることがわかる。猫はおもちゃを欲しがっているのが明らかで、愛らしい仕草でねずみにアピールしている。
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <span class="info-label">🎯 表すコアイメージ</span>
+                    <div class="info-content core-image">
+                        この単語の本質的な意味は、何かを強く求めることや、助けを乞うこと。猫がねずみにおもちゃをお願いすることで、他者に対して頼る姿勢を象徴している。
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <span class="info-label">🤖 生成プロンプト</span>
+                    <div class="info-content prompt">
+                        A friendly cat is sitting with its front paws raised, looking up at a surprised mouse. The cat has big, pleading eyes, and its expression is sweet and innocent. The mouse holds a toy in its paws, looking astonished at the cat's request. The background features a lush green park with a bright blue sky, and there are various toys scattered around the cat. The scene captures the essence of begging in a playful and friendly manner. No text, no words, no dialogue.
+                    </div>
+                </div>
+                
+                
+                <div class="info-item">
+                    <span class="info-label">💰 生成コスト</span>
+                    <div class="info-content cost-info">
+                        <pre>💰 生成コスト詳細
+・チャット生成: $0.000000 (762 tokens)
+・画像生成: $0.030000 (auto quality)
+・総コスト: $0.030000 (約4.50円)</pre>
+                    </div>
+                </div>
+        
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Word Image Maker - 英単語学習支援ツール</p>
+            <p>Generated on: 2025年07月11日 17:31:34</p>
+        </div>
+    </div>
+</body>
+</html>

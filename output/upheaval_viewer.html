@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Image Maker - upheaval</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin-bottom: 20px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .word-title {
+            font-size: 3em;
+            color: #2c3e50;
+            margin: 0;
+            font-weight: bold;
+        }
+        
+        .subtitle {
+            font-size: 1.2em;
+            color: #7f8c8d;
+            margin-top: 10px;
+        }
+        
+        .content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            align-items: start;
+        }
+        
+        .image-section {
+            text-align: center;
+        }
+        
+        .generated-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+            border: 3px solid #3498db;
+        }
+        
+        .info-section {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .info-item {
+            margin-bottom: 20px;
+        }
+        
+        .info-label {
+            font-weight: bold;
+            color: #2c3e50;
+            font-size: 1.1em;
+            margin-bottom: 8px;
+            display: block;
+        }
+        
+        .info-content {
+            color: #34495e;
+            line-height: 1.6;
+            font-size: 1em;
+        }
+        
+        .scene-description {
+            background-color: #e8f5e8;
+            padding: 15px;
+            border-radius: 6px;
+            border-left: 4px solid #27ae60;
+        }
+        
+        .core-image {
+            background-color: #fff3cd;
+            padding: 15px;
+            border-radius: 6px;
+            border-left: 4px solid #ffc107;
+        }
+        
+        .prompt {
+            background-color: #e7f3ff;
+            padding: 15px;
+            border-radius: 6px;
+            border-left: 4px solid #007bff;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        .cost-info {
+            background-color: #f0f8ff;
+            padding: 15px;
+            border-radius: 6px;
+            border-left: 4px solid #20a5ff;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85em;
+        }
+        
+        .cost-info pre {
+            margin: 0;
+            white-space: pre-wrap;
+            color: #1e3a8a;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #dee2e6;
+            color: #6c757d;
+        }
+        
+        @media (max-width: 768px) {
+            .content {
+                grid-template-columns: 1fr;
+            }
+            
+            .word-title {
+                font-size: 2.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="word-title">upheaval</h1>
+            <p class="subtitle">英単語イメージイラスト</p>
+        </div>
+        
+        <div class="content">
+            <div class="image-section">
+                <img src="images/upheaval_20250711_173538.png" alt="upheaval illustration" class="generated-image">
+                <p style="margin-top: 15px; color: #6c757d; font-style: italic;">
+                    生成されたイラスト
+                </p>
+            </div>
+            
+            <div class="info-section">
+                <div class="info-item">
+                    <span class="info-label">🎬 シーンの内容</span>
+                    <div class="info-content scene-description">
+                        猫とねずみが小さな公園で遊んでいると、突然風が強く吹き始め、周りの木々が激しく揺れ動く。猫は驚いて目を大きく開き、尻尾を立てている。一方、ねずみは小さな手で帽子を押さえながら、恐れを感じている。背景には揺れ動く木の葉、飛び散るゴミ、そして空中に舞い上がった小さな木の枝が見える。全体的に緊張感のある雰囲気が漂っている。
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <span class="info-label">🎯 表すコアイメージ</span>
+                    <div class="info-content core-image">
+                        upheavalは、急激な変化や動乱を意味し、予想外の出来事が周囲に大きな影響を与える状況を表現する。これは静かな日常が激しく変わる瞬間を捉えたイメージである。
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <span class="info-label">🤖 生成プロンプト</span>
+                    <div class="info-content prompt">
+                        A scene in a small park where a cat and a mouse are playing. Suddenly, a strong wind starts to blow, causing the trees to sway violently. The cat looks surprised with wide eyes and an upright tail, while the mouse is holding its small hat down with its tiny hands, showing fear. In the background, trees are shaking, leaves are flying, and small branches are lifted into the air. The overall atmosphere is tense and chaotic. No text, no words, no dialogue.
+                    </div>
+                </div>
+                
+                
+                <div class="info-item">
+                    <span class="info-label">💰 生成コスト</span>
+                    <div class="info-content cost-info">
+                        <pre>💰 生成コスト詳細
+・チャット生成: $0.000000 (763 tokens)
+・画像生成: $0.030000 (auto quality)
+・総コスト: $0.030000 (約4.50円)</pre>
+                    </div>
+                </div>
+        
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Word Image Maker - 英単語学習支援ツール</p>
+            <p>Generated on: 2025年07月11日 17:35:38</p>
+        </div>
+    </div>
+</body>
+</html>
