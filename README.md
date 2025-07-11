@@ -1,5 +1,81 @@
 # Word Image Maker Ver.2 - セットアップガイド
 
+## 📋 事前準備
+
+### Python 3.8以上のインストール
+
+セットアップスクリプトを実行する前に、Python 3.8以上が必要です。
+
+#### Windows
+1. **Python公式サイトからダウンロード**
+   - https://www.python.org/downloads/windows/
+   - 「Download Python 3.x.x」をクリック
+
+2. **インストール時の注意**
+   - ✅ 「Add Python to PATH」を**必ずチェック**
+   - ✅ 「Install for all users」を選択（推奨）
+   - インストール完了後、コマンドプロンプトを再起動
+
+3. **インストール確認**
+   ```cmd
+   python --version
+   # Python 3.x.x と表示されればOK
+   ```
+
+#### macOS
+```bash
+# Homebrewを使用（推奨）
+brew install python3
+
+# または公式サイトから
+# https://www.python.org/downloads/macos/
+```
+
+#### Linux（Ubuntu/Debian）
+```bash
+# パッケージマネージャーでインストール
+sudo apt update
+sudo apt install python3 python3-pip python3-venv
+
+# インストール確認
+python3 --version
+```
+
+#### Linux（CentOS/RHEL）
+```bash
+# パッケージマネージャーでインストール
+sudo yum install python3 python3-pip
+
+# または
+sudo dnf install python3 python3-pip
+```
+
+### Git のインストール
+
+プロジェクトをクローンするために Git が必要です。
+
+#### Windows
+- https://git-scm.com/download/win
+- インストーラーをダウンロードして実行
+
+#### macOS
+```bash
+# Homebrewを使用
+brew install git
+
+# またはXcode Command Line Tools
+xcode-select --install
+```
+
+#### Linux
+```bash
+# Ubuntu/Debian
+sudo apt install git
+
+# CentOS/RHEL
+sudo yum install git
+```
+
 ## 🚀 初心者向け簡単セットアップ
 
 ### Linux / macOS 用
@@ -260,24 +336,55 @@ light#軽い（重量）
 ### よくある問題と解決方法
 
 1. **「Python が見つかりません」**
-   - Python 3.8以上をインストール
-   - Linux: `sudo apt install python3 python3-venv`
-   - macOS: `brew install python3`
-   - Windows: https://www.python.org/downloads/
+   - **Windows**: 
+     - Python がインストールされていない → 上記の事前準備を参照
+     - PATH が通っていない → インストール時に「Add Python to PATH」をチェック
+     - コマンドプロンプトを再起動
+   - **macOS**: `brew install python3`
+   - **Linux**: `sudo apt install python3 python3-venv`
 
-2. **「権限エラー」**
-   - Linux/macOS: `chmod +x setup_and_run.sh`
-   - Windows: 管理者権限で実行
+2. **「python コマンドが見つからない」（Windows）**
+   ```cmd
+   # python3 ではなく python で試す
+   python --version
+   
+   # または py コマンドを使用
+   py --version
+   ```
 
-3. **「ポート使用中」**
-   - 他のWebサーバーを停止
-   - `lsof -ti:5000 | xargs kill -9` (Linux/macOS)
-   - タスクマネージャーでプロセス終了 (Windows)
+3. **「権限エラー」**
+   - **Linux/macOS**: `chmod +x setup_and_run.sh`
+   - **Windows**: 管理者権限でコマンドプロンプトを開く
+     - スタートメニュー → `cmd` → 右クリック → 「管理者として実行」
 
-4. **「依存関係インストール失敗」**
+4. **「ポート使用中」**
+   - **Linux/macOS**: `lsof -ti:5000 | xargs kill -9`
+   - **Windows**: タスクマネージャーでポート5000を使用中のプロセスを終了
+
+5. **「依存関係インストール失敗」**
    - インターネット接続確認
    - 社内プロキシ設定確認
    - `pip install --upgrade pip`
+   - **Windows**: 管理者権限で実行
+
+6. **「git コマンドが見つからない」**
+   - Git がインストールされていない → 上記の事前準備を参照
+   - **Windows**: Git Bashを使用するか、コマンドプロンプトを再起動
+
+## 💻 システム要件
+
+### 最小要件
+- **OS**: Windows 10/11, macOS 10.14+, Linux (Ubuntu 18.04+)
+- **Python**: 3.8以上
+- **メモリ**: 4GB以上
+- **ストレージ**: 1GB以上の空き容量
+- **ネットワーク**: インターネット接続（OpenAI API利用時）
+
+### 推奨環境
+- **Python**: 3.9以上
+- **メモリ**: 8GB以上
+- **ストレージ**: 2GB以上の空き容量
+- **ディスプレイ**: 1920x1080以上
 
 ## 📞 サポート
 
