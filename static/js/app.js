@@ -109,7 +109,7 @@ function showResults(data) {
                         <p class="card-text">
                             コスト: $${result.cost.toFixed(4)}
                         </p>
-                        <a href="/view/${result.word}_viewer.html" target="_blank" class="btn btn-outline-primary btn-sm">
+                        <a href="/view/${result.html_filename}" target="_blank" class="btn btn-outline-primary btn-sm">
                             <i class="fas fa-eye"></i> 表示
                         </a>
                     </div>

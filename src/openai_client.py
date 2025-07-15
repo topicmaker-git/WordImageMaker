@@ -87,7 +87,7 @@ class OpenAIClient:
         except Exception as e:
             raise Exception(f"シーン生成中にエラーが発生しました: {str(e)}")
     
-    def create_image_edit(self, image_path: str, prompt: str, size: str = "1024x1024") -> str:
+    def create_image_edit(self, image_path: str, prompt: str, size: str = "1024x1024", quality: str = "auto") -> str:
         """
         gpt-image-1で画像編集を実行
         
@@ -95,6 +95,7 @@ class OpenAIClient:
             image_path: ベース画像のパス
             prompt: 生成用プロンプト
             size: 画像サイズ
+            quality: 画像品質（auto, low, medium, high）
             
         Returns:
             生成された画像のbase64データ
@@ -106,7 +107,7 @@ class OpenAIClient:
                     image=image_file,
                     prompt=prompt,
                     size=size,
-                    quality="auto",
+                    quality=quality,
                     n=1
                 )
             

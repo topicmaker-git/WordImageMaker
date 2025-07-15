@@ -12,7 +12,7 @@ class HTMLGenerator:
         # 出力ディレクトリが存在しない場合は作成
         os.makedirs(self.output_dir, exist_ok=True)
     
-    def generate_viewer_html(self, scene_data: Dict[str, Any], image_path: str, cost_info: Dict[str, Any] = None) -> str:
+    def generate_viewer_html(self, scene_data: Dict[str, Any], image_path: str, cost_info: Dict[str, Any] = None, quality: str = "auto") -> str:
         """
         画像確認用のHTMLファイルを生成
         
@@ -20,12 +20,13 @@ class HTMLGenerator:
             scene_data: シーンデータ
             image_path: 生成された画像のパス
             cost_info: コスト情報（オプション）
+            quality: 画像品質（auto, low, medium, high）
             
         Returns:
             生成されたHTMLファイルのパス
         """
         word = scene_data["word"]
-        html_filename = f"{word}_viewer.html"
+        html_filename = f"{word}_{quality}_viewer.html"
         html_path = os.path.join(self.output_dir, html_filename)
         
         # 画像パスを相対パスに変換

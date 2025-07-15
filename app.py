@@ -95,14 +95,16 @@ def generate_images():
                 # Generate image
                 image_path, cost_info = image_generator.generate_image(
                     f"image/{character_image}",
-                    scene_data
+                    scene_data,
+                    quality
                 )
                 
                 # Generate HTML viewer
                 html_path = html_generator.generate_viewer_html(
                     scene_data, 
                     image_path,
-                    cost_info
+                    cost_info,
+                    quality
                 )
                 
                 # Calculate cost (already calculated in image generation)
@@ -115,6 +117,7 @@ def generate_images():
                     'status': 'success',
                     'image_path': image_path,
                     'html_path': html_path,
+                    'html_filename': os.path.basename(html_path),
                     'cost': word_cost
                 })
                 

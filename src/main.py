@@ -54,11 +54,11 @@ class WordImageMaker:
             self.scene_generator.display_scene_info(scene_data)
             
             # 2. イラストを生成
-            image_path, cost_info = self.image_generator.generate_image(self.base_image_path, scene_data)
+            image_path, cost_info = self.image_generator.generate_image(self.base_image_path, scene_data, quality="auto")
             self.image_generator.display_image_info(image_path)
             
             # 3. HTMLファイルを生成
-            html_path = self.html_generator.generate_viewer_html(scene_data, image_path, cost_info)
+            html_path = self.html_generator.generate_viewer_html(scene_data, image_path, cost_info, quality="auto")
             
             # 4. ブラウザで開く
             if open_browser:

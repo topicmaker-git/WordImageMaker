@@ -16,13 +16,14 @@ class ImageGenerator:
         # 出力ディレクトリが存在しない場合は作成
         os.makedirs(self.output_dir, exist_ok=True)
     
-    def generate_image(self, base_image_path: str, scene_data: Dict[str, Any]) -> str:
+    def generate_image(self, base_image_path: str, scene_data: Dict[str, Any], quality: str = "auto") -> str:
         """
         シーンデータを基にイラストを生成
         
         Args:
             base_image_path: ベースとなるキャラクター画像のパス（参考用）
             scene_data: シーンデータ
+            quality: 画像品質（auto, low, medium, high）
             
         Returns:
             生成された画像のローカルパス
@@ -32,13 +33,15 @@ class ImageGenerator:
         
         print(f"'{word}' のイラスト生成中...")
         print(f"プロンプト: {prompt}")
+        print(f"品質設定: {quality}")
         
         try:
             # gpt-image-1でベース画像を編集
             image_result = self.openai_client.create_image_edit(
                 image_path=base_image_path,
                 prompt=prompt,
-                size="1024x1024"
+                size="1024x1024",
+                quality=quality
             )
             
             # 生成された画像をbase64から保存
@@ -55,7 +58,7 @@ class ImageGenerator:
             
             image_cost = self.cost_calculator.calculate_image_cost(
                 model="gpt-image-1", 
-                quality="auto",
+                quality=quality,
                 size="1024x1024",
                 count=1,
                 prompt_tokens=text_tokens,
