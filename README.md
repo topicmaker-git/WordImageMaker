@@ -204,10 +204,10 @@ WordImageMaker/
 │   │   ├── hello_20250711_123456.png
 │   │   ├── world_20250711_123501.png
 │   │   └── bank_20250711_123507.png
-│   └── [単語]_viewer.html    # 確認用HTMLファイル
-│       ├── hello_viewer.html
-│       ├── world_viewer.html
-│       └── bank_viewer.html
+│   └── [単語]_[品質]_viewer.html  # 確認用HTMLファイル
+│       ├── hello_high_viewer.html
+│       ├── world_high_viewer.html
+│       └── bank_high_viewer.html
 ```
 
 ### 生成ファイルの詳細
@@ -221,7 +221,7 @@ WordImageMaker/
 
 #### 2. HTMLビューアファイル
 - **保存場所**: `output/`
-- **ファイル名**: `[単語]_viewer.html`
+- **ファイル名**: `[単語]_[品質]_viewer.html`
 - **内容**: 
   - 生成された画像の表示
   - シーン説明とコアイメージ
@@ -251,8 +251,8 @@ xdg-open output/images/hello_20250711_123456.png  # Linux
 プロジェクトには以下が含まれています：
 ```
 image/
-├── cat_and_mouse.jpeg    # 元画像（JPEG）
-└── cat_and_mouse.png     # PNG変換版（使用推奨）
+├── cat_and_mouse.png        # デフォルトキャラクター画像
+└── octopus_and_crab.png     # 追加キャラクター画像
 ```
 
 ### カスタムキャラクターの追加
